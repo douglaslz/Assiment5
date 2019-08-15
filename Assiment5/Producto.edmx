@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="dollarcomputersModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="products">
+          <Key>
+            <PropertyRef Name="productID" />
+          </Key>
+          <Property Name="productID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cost" Type="money" />
+          <Property Name="manufacturer" Type="nvarchar" MaxLength="255" />
+          <Property Name="model" Type="nvarchar" MaxLength="255" />
+          <Property Name="RAM_type" Type="nvarchar" MaxLength="255" />
+          <Property Name="RAM_size" Type="nvarchar" MaxLength="255" />
+          <Property Name="displaytype" Type="nvarchar" MaxLength="255" />
+          <Property Name="screensize" Type="nvarchar" MaxLength="255" />
+          <Property Name="resolution" Type="nvarchar" MaxLength="255" />
+          <Property Name="CPU_Class" Type="nvarchar" MaxLength="255" />
+          <Property Name="CPU_brand" Type="nvarchar" MaxLength="255" />
+          <Property Name="CPU_type" Type="nvarchar" MaxLength="255" />
+          <Property Name="CPU_speed" Type="nvarchar" MaxLength="255" />
+          <Property Name="CPU_number" Type="nvarchar" MaxLength="255" />
+          <Property Name="condition" Type="nvarchar" MaxLength="255" />
+          <Property Name="OS" Type="nvarchar" MaxLength="255" />
+          <Property Name="platform" Type="nvarchar" MaxLength="255" />
+          <Property Name="HDD_size" Type="nvarchar" MaxLength="255" />
+          <Property Name="HDD_speed" Type="nvarchar" MaxLength="255" />
+          <Property Name="GPU_Type" Type="nvarchar" MaxLength="255" />
+          <Property Name="optical_drive" Type="nvarchar" MaxLength="255" />
+          <Property Name="Audio_type" Type="nvarchar" MaxLength="255" />
+          <Property Name="LAN" Type="nvarchar" MaxLength="255" />
+          <Property Name="WIFI" Type="nvarchar" MaxLength="255" />
+          <Property Name="width" Type="nvarchar" MaxLength="255" />
+          <Property Name="height" Type="nvarchar" MaxLength="255" />
+          <Property Name="depth" Type="nvarchar" MaxLength="255" />
+          <Property Name="weight" Type="nvarchar" MaxLength="255" />
+          <Property Name="moust_type" Type="nvarchar" MaxLength="255" />
+          <Property Name="power" Type="nvarchar" MaxLength="255" />
+          <Property Name="webcam" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityContainer Name="dollarcomputersModelStoreContainer">
+          <EntitySet Name="products" EntityType="Self.products" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dollarcomputersModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="product">
+          <Key>
+            <PropertyRef Name="productID" />
+          </Key>
+          <Property Name="productID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cost" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="manufacturer" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="model" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RAM_type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RAM_size" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="displaytype" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="screensize" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="resolution" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CPU_Class" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CPU_brand" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CPU_type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CPU_speed" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CPU_number" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="condition" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="OS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="platform" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HDD_size" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HDD_speed" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="GPU_Type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="optical_drive" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Audio_type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LAN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="WIFI" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="width" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="height" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="depth" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="weight" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="moust_type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="power" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="webcam" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="dollarcomputersEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="products" EntityType="Self.product" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dollarcomputersModelStoreContainer" CdmEntityContainer="dollarcomputersEntities">
+          <EntitySetMapping Name="products">
+            <EntityTypeMapping TypeName="dollarcomputersModel.product">
+              <MappingFragment StoreEntitySet="products">
+                <ScalarProperty Name="productID" ColumnName="productID" />
+                <ScalarProperty Name="cost" ColumnName="cost" />
+                <ScalarProperty Name="manufacturer" ColumnName="manufacturer" />
+                <ScalarProperty Name="model" ColumnName="model" />
+                <ScalarProperty Name="RAM_type" ColumnName="RAM_type" />
+                <ScalarProperty Name="RAM_size" ColumnName="RAM_size" />
+                <ScalarProperty Name="displaytype" ColumnName="displaytype" />
+                <ScalarProperty Name="screensize" ColumnName="screensize" />
+                <ScalarProperty Name="resolution" ColumnName="resolution" />
+                <ScalarProperty Name="CPU_Class" ColumnName="CPU_Class" />
+                <ScalarProperty Name="CPU_brand" ColumnName="CPU_brand" />
+                <ScalarProperty Name="CPU_type" ColumnName="CPU_type" />
+                <ScalarProperty Name="CPU_speed" ColumnName="CPU_speed" />
+                <ScalarProperty Name="CPU_number" ColumnName="CPU_number" />
+                <ScalarProperty Name="condition" ColumnName="condition" />
+                <ScalarProperty Name="OS" ColumnName="OS" />
+                <ScalarProperty Name="platform" ColumnName="platform" />
+                <ScalarProperty Name="HDD_size" ColumnName="HDD_size" />
+                <ScalarProperty Name="HDD_speed" ColumnName="HDD_speed" />
+                <ScalarProperty Name="GPU_Type" ColumnName="GPU_Type" />
+                <ScalarProperty Name="optical_drive" ColumnName="optical_drive" />
+                <ScalarProperty Name="Audio_type" ColumnName="Audio_type" />
+                <ScalarProperty Name="LAN" ColumnName="LAN" />
+                <ScalarProperty Name="WIFI" ColumnName="WIFI" />
+                <ScalarProperty Name="width" ColumnName="width" />
+                <ScalarProperty Name="height" ColumnName="height" />
+                <ScalarProperty Name="depth" ColumnName="depth" />
+                <ScalarProperty Name="weight" ColumnName="weight" />
+                <ScalarProperty Name="moust_type" ColumnName="moust_type" />
+                <ScalarProperty Name="power" ColumnName="power" />
+                <ScalarProperty Name="webcam" ColumnName="webcam" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

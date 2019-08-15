@@ -10,11 +10,24 @@ using System.Windows.Forms;
 
 namespace Assiment5
 {
+    
     public partial class ProductInfoForm : Form
     {
+        public string numero= "";
+
         public ProductInfoForm()
         {
             InitializeComponent();
         }
+
+        private void ProductInfoForm_Load(object sender, EventArgs e)
+        {
+
+
+            textBox1.Text = SelectForm.numero;
+
+            
+        }
+
     }
 }

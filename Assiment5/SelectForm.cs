@@ -12,6 +12,8 @@ namespace Assiment5
 {
     public partial class SelectForm : Form
     {
+        public static string numero = "";
+
         public SelectForm()
         {
             InitializeComponent();
@@ -41,8 +43,10 @@ namespace Assiment5
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
+            
             DataGridViewRow seletedrow = dataGridView1.Rows[index];
             textBox1.Text = seletedrow.Cells[2].Value.ToString() + seletedrow.Cells[3].Value.ToString() + String.Format(" Price at:  {0:C}", seletedrow.Cells[1].Value.ToString());
+            numero = seletedrow.Cells[0].Value.ToString();
 
         }
 
@@ -50,6 +54,7 @@ namespace Assiment5
         {
             ProductInfoForm productInfoForm = new ProductInfoForm();
             productInfoForm.Show();
+            
             this.Hide();
         }
     }

@@ -421,6 +421,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ProductInfoForm";
             this.Text = "Product Information Form";
+            this.Load += new System.EventHandler(this.ProductInfoForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
