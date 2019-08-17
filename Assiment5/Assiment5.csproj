@@ -99,6 +99,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Producto.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Products.cs" />
     <Compile Include="SelectForm.cs">
       <SubType>Form</SubType>
     </Compile>

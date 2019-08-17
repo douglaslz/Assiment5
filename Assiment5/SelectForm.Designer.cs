@@ -33,14 +33,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tBCHBOOKSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cHARJDDataSet = new Assiment5.CHARJDDataSet();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.tBCH_BOOKSTableAdapter = new Assiment5.CHARJDDataSetTableAdapters.TBCH_BOOKSTableAdapter();
-            this.dollarcomputersDataSet = new Assiment5.dollarcomputersDataSet();
-            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productsTableAdapter = new Assiment5.dollarcomputersDataSetTableAdapters.productsTableAdapter();
             this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,11 +60,19 @@
             this.mousttypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.powerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.webcamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dollarcomputersDataSet = new Assiment5.dollarcomputersDataSet();
+            this.tBCHBOOKSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cHARJDDataSet = new Assiment5.CHARJDDataSet();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.tBCH_BOOKSTableAdapter = new Assiment5.CHARJDDataSetTableAdapters.TBCH_BOOKSTableAdapter();
+            this.productsTableAdapter = new Assiment5.dollarcomputersDataSetTableAdapters.productsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dollarcomputersDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBCHBOOKSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHARJDDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dollarcomputersDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -145,56 +145,6 @@
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // tBCHBOOKSBindingSource
-            // 
-            this.tBCHBOOKSBindingSource.DataMember = "TBCH_BOOKS";
-            this.tBCHBOOKSBindingSource.DataSource = this.cHARJDDataSet;
-            // 
-            // cHARJDDataSet
-            // 
-            this.cHARJDDataSet.DataSetName = "CHARJDDataSet";
-            this.cHARJDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(808, 582);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 46);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Cancel";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(964, 584);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 46);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Next";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // tBCH_BOOKSTableAdapter
-            // 
-            this.tBCH_BOOKSTableAdapter.ClearBeforeFill = true;
-            // 
-            // dollarcomputersDataSet
-            // 
-            this.dollarcomputersDataSet.DataSetName = "dollarcomputersDataSet";
-            this.dollarcomputersDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productsBindingSource
-            // 
-            this.productsBindingSource.DataMember = "products";
-            this.productsBindingSource.DataSource = this.dollarcomputersDataSet;
-            // 
-            // productsTableAdapter
-            // 
-            this.productsTableAdapter.ClearBeforeFill = true;
             // 
             // productIDDataGridViewTextBoxColumn
             // 
@@ -359,6 +309,56 @@
             this.webcamDataGridViewTextBoxColumn.HeaderText = "webcam";
             this.webcamDataGridViewTextBoxColumn.Name = "webcamDataGridViewTextBoxColumn";
             // 
+            // productsBindingSource
+            // 
+            this.productsBindingSource.DataMember = "products";
+            this.productsBindingSource.DataSource = this.dollarcomputersDataSet;
+            // 
+            // dollarcomputersDataSet
+            // 
+            this.dollarcomputersDataSet.DataSetName = "dollarcomputersDataSet";
+            this.dollarcomputersDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tBCHBOOKSBindingSource
+            // 
+            this.tBCHBOOKSBindingSource.DataMember = "TBCH_BOOKS";
+            this.tBCHBOOKSBindingSource.DataSource = this.cHARJDDataSet;
+            // 
+            // cHARJDDataSet
+            // 
+            this.cHARJDDataSet.DataSetName = "CHARJDDataSet";
+            this.cHARJDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(808, 582);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 46);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Cancel";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(964, 584);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(91, 46);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Next";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // tBCH_BOOKSTableAdapter
+            // 
+            this.tBCH_BOOKSTableAdapter.ClearBeforeFill = true;
+            // 
+            // productsTableAdapter
+            // 
+            this.productsTableAdapter.ClearBeforeFill = true;
+            // 
             // SelectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -377,10 +377,10 @@
             this.Text = "Select your Computer";
             this.Load += new System.EventHandler(this.SelectForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dollarcomputersDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBCHBOOKSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHARJDDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dollarcomputersDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
