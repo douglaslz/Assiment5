@@ -54,14 +54,15 @@ namespace Assiment5
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if(textBox1.Text == "")
+            {
+                MessageBox.Show("You need to select any item before continue");
+            }
+            else { 
             ProductInfoForm productInfoForm = new ProductInfoForm();
             productInfoForm.Show();
-
-            
-            
-
-
-            this.Hide();
-        }
+                this.Hide();
+            }
+}
     }
 }

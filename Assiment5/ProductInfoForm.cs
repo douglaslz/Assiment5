@@ -60,15 +60,31 @@ namespace Assiment5
                 textBox13.Text = nombre.CPU_type;
                 textBox10.Text = nombre.CPU_speed;
                 textBox9.Text = nombre.webcam;
-
-
-
-
-                //var l = a.products
-                //    .SqlQuery("Select * from products where productID = '"+numero+"'").ToList();
+                
 
             }
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SelectForm selectForm = new SelectForm();
+            selectForm.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            StartForm startForm = new StartForm();
+            startForm.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OrdenForm ordenForm = new OrdenForm();
+            ordenForm.Show();
+            this.Hide();
         }
     }
 }
